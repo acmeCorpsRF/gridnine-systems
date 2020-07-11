@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gridnine Systems</title>
+<link href="styles.620641ecfff023a79474.css" rel="stylesheet"></head>
+<body>
+<header></header>
+<div class="wrapper">
+    <aside class="aside">
+        <div class="search-form">
+            <form action="">
+                <fieldset class="search-form__field">
+                    <legend class="search-form__field-title">Сортировать</legend>
+                    <label class="search-form__field-label">
+                        <input id="ascending-price" type="radio" class="search-form__field-input" name="sort">
+                        - по возрастанию цены
+                    </label>
+                    <label class="search-form__field-label">
+                        <input id="descending-price" type="radio" class="search-form__field-input" name="sort">
+                        - по убыванию цены
+                    </label>
+                    <label class="search-form__field-label">
+                        <input id="by-travel-time" type="radio" class="search-form__field-input" name="sort">
+                        - по времени в пути
+                    </label>
+                </fieldset>
+                <fieldset class="search-form__field">
+                    <legend class="search-form__field-title">Фильтровать</legend>
+                    <label class="search-form__field-label">
+                        <input id="filter" type="checkbox" class="search-form__field-input" name="filter">
+                        - без пересадок
+                    </label>
+                </fieldset>
+                <fieldset class="search-form__field">
+                    <legend class="search-form__field-title">Цена</legend>
+                    <label class="search-form__field-label">
+                        От <input id="min-price" class="search-form__field-input" type="number" name="number" value="0"
+                                  min="0">
+                    </label>
+                    <label class="search-form__field-label">
+                        До <input id="max-price" class="search-form__field-input" type="number" name="number"
+                                  value="100000" min="0">
+                    </label>
+                </fieldset>
+            </form>
+        </div>
+    </aside>
+    <main class="main">
+        <div id="content" class="content"></div>
+    </main>
+</div>
+<footer></footer>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>

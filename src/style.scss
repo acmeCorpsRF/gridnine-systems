@@ -1,0 +1,245 @@
+@font-face {
+  font-family: OpenSans-Regular;
+  src: url('../assets/fonts/OpenSans/OpenSans-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+button, input, textarea, select, option, fieldset {
+  border: none;
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+a, input, button {
+  transition-property: color, background-image, background-color, transform, opacity, box-shadow, border;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+
+::before, ::after {
+  box-sizing: border-box;
+  transition: 0.3s linear;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100%;
+  font-family: OpenSans-Regular, sans-serif;
+  background-color: #f4f4f6;
+}
+
+.wrapper {
+  position: relative;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.aside {
+  position: absolute;
+  width: 255px;
+  height: 100%;
+  background-color: #d8d8d8;
+}
+
+.main {
+  margin-left: 255px;
+  padding-top: 18px;
+  padding-left: 27px;
+  padding-bottom: 18px;
+}
+
+.flight-list {
+  max-width: 635px;
+  list-style-type: none;
+
+  &__item {
+    margin-bottom: 18px;
+
+    &-header {
+      height: 44px;
+      padding-right: 12px;
+      padding-left: 12px;
+      color: #ffffff;
+      background-color: #425668;
+
+      &-carrier {
+        line-height: 44px;
+      }
+
+    }
+
+    &-price {
+      float: right;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      &-total {
+        font-size: 22px;
+      }
+
+      &-subtitle {
+        font-size: 11px;
+        line-height: 7px;
+      }
+
+    }
+
+    &-info {
+      height: 142px;
+      padding-right: 7px;
+      padding-left: 7px;
+      background-color: #ffffff;
+
+      .small {
+        font-size: 13px;
+      }
+
+    }
+
+    &-button {
+      display: block;
+      padding-top: 9px;
+      padding-bottom: 10px;
+      font-size: 14px;
+      color: #ffffff;
+      background-color: #fc221b;
+      text-align: center;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover {
+        background-color: lighten(#fc221b, 10%);
+      }
+
+    }
+
+    &-flight-points {
+      padding-top: 2px;
+      padding-right: 10px;
+      padding-left: 10px;
+      line-height: 39px;
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    &-arrow {
+      margin-right: 3px;
+      margin-left: 3px;
+    }
+
+    &-flight-dates {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 31px;
+      padding-top: 8px;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+
+    &-travel-time {
+      margin-top: 3px;
+    }
+
+    &-clock {
+      font-size: 24px;
+      line-height: 22px;
+    }
+
+    &-carrier {
+      margin-left: 14px;
+      font-size: 13px;
+    }
+
+  }
+
+}
+
+.search-form {
+  margin-top: 36px;
+  padding: 20px 18px;
+  background-color: #ffffff;
+
+  &__field {
+    $filed: &;
+
+    &:first-child {
+      margin-bottom: 40px;
+
+      #{$filed}-label {
+        line-height: 17px;
+      }
+
+      #{$filed}-input {
+        margin-right: 3px;
+      }
+
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 17px;
+
+      #{$filed}-label {
+        line-height: 17px;
+      }
+
+      #{$filed}-input {
+        margin-right: 3px;
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      #{$filed}-label:first-of-type {
+        margin-bottom: 17px;
+      }
+
+      #{$filed}-input {
+        padding-right: 2px;
+        padding-left: 2px;
+        line-height: 18px;
+        border: 1px solid #777777;
+        border-radius: 5px;
+      }
+
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font: {
+        size: 13px;
+        weight: bold;
+      }
+      letter-spacing: 0.5px;
+    }
+
+    &-label {
+      display: block;
+      font-size: 13px;
+    }
+
+  }
+
+}
